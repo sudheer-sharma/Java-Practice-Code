@@ -24,7 +24,7 @@ public class ArrayListss {
         List2.add("Shiwagma");
         List2.add("Manti");
         List2.add("Mwali");
-        System.out.println(List2);
+        // System.out.println(List2);
 
         // Get Opration
         int element = list.get(3);
