@@ -1,7 +1,7 @@
 
-import java.util.ArrayList;
-
-// public class ArrayListss {
+// import java.util.ArrayList;
+// import java.util.Collections;
+//
 //     public static void main(String[] args) {
 //         ArrayList<Integer> list = new ArrayList<>();
 //         ArrayList<String> List2 = new ArrayList<>();
@@ -86,31 +86,130 @@ import java.util.ArrayList;
 // }
 //
 //
+// // // // Find Maximun Number
+// public class ArrayListss {
+//     public static void swap(ArrayList<Integer> list, int idx1, int idx2) {
+//         int temp = list.get(idx1);
+//         list.set(idx1, list.get(idx2));
+//         list.set(idx2, temp);
+//     }
+//     public static void main(String[] args) {
+//         ArrayList<Integer> list = new ArrayList<>();
+//         list.add(8);
+//         list.add(2);
+//         list.add(1);
+//         list.add(5);
+//         list.add(9);
+//         list.add(7);
+//         list.add(0);
+//         list.add(6);
+//         list.add(14);
+//         list.add(4);
+//         int idx1 = 2, idx2 = 8;
+//         System.out.println(list);
+//         swap(list, idx1, idx2);
+//         System.out.println(list);
+//     }
+// }
+// 
+// 
 //
+// // //  Sorting in ArrayList
+// public class ArrayListss {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> list = new ArrayList<>();
+//         list.add(8);
+//         list.add(2);
+//         list.add(1);
+//         list.add(5);
+//         list.add(9);
+//         list.add(7);
+//         list.add(0);
+//         list.add(6);
+//         list.add(14);
+//         list.add(4);
+// //
+// // Sort in Asending order
+//         System.out.println(list);
+//         Collections.sort(list);
+//         System.out.println(list);
+//         //
+// // Sort in Desending order
+//         Collections.sort(list, Collections.reverseOrder());
+//         System.out.println(list);
+//     }
+// }
+//
+//
+//
+// // // // Multi-dimensional ArrayList
+// // 
+// public class ArrayListss {
+//     public static void main(String[] args) {
+//         ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
+//         ArrayList<Integer> list1 = new ArrayList<>();
+//         ArrayList<Integer> list2 = new ArrayList<>();
+//         ArrayList<Integer> list3 = new ArrayList<>();
+//         // // First type
+//         //
+//         // list1.add(1);
+//         // list1.add(2);
+//         // list1.add(3);
+//         // list2.add(1);
+//         // list2.add(2);
+//         // list2.add(3);
+//         // list3.add(1);
+//         // list3.add(2);
+//         // list3.add(3);
+//         // mainList.add(list1);
+//         // mainList.add(list2);
+//         // mainList.add(list3);
+//         // // System.out.println(mainList);
+//         // // System.out.println(list1);
+//         // // System.out.println(list2);
+//         // // System.out.println(list3);
+//         // for (int i = 0; i < mainList.size(); i++) {
+//         //     ArrayList<Integer> currentList = mainList.get(i);
+//         //     // System.out.print(mainList.get(i));
+//         //     for (int j = 0; j < currentList.size(); j++) {
+//         //         System.out.print(currentList.get(j) + " ");
+//         //     }
+//         //     System.out.println();
+//         // }
+//         // System.out.println(mainList);
+//         //
+//         // // Scond Type
+//         for (int i = 1; i <= 5; i++) {
+//             list1.add(i * 1);
+//             list2.add(i * 2);
+//             list3.add(i * 3);
+//         }
+//         // System.out.println(list1);
+//         // System.out.println(list2);
+//         // System.out.println(list3);
+//         //
+//         mainList.add(list1);
+//         mainList.add(list2);
+//         mainList.add(list3);
+//         //
+//         // System.out.print(mainList);
+//         //
+//         for (int i = 0; i < mainList.size(); i++) {
+//             // System.out.print(mainList.get(i) + " ");
+//             ArrayList<Integer> currList = mainList.get(i);
+//             for (int j = 0; j < currList.size(); j++) {
+//                 System.out.print(currList.get(j) + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+//
+//
+// // Container with most water
 public class ArrayListss {
 
-    public static void sawp(ArrayList<Integer> list, int idx1, int idx2) {
-        int temp = list.get(idx1);
-        list.set(idx1, list.get(idx2));
-        list.set(idx2, temp);
-    }
-
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(8);
-        list.add(2);
-        list.add(1);
-        list.add(5);
-        list.add(9);
-        list.add(7);
-        list.add(0);
-        list.add(6);
-        list.add(14);
-        list.add(4);
 
-        int idx1 = 1, idx2 = 3;
-        System.out.println(list);
-        sawp(list, idx1, idx2);
-        System.out.println(list);
     }
 }
