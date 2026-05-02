@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+
 // import java.util.ArrayList;
 // import java.util.Collections;
 //
@@ -178,6 +180,8 @@
 //         // }
 //         // System.out.println(mainList);
 //         //
+//
+//
 //         // // Scond Type
 //         for (int i = 1; i <= 5; i++) {
 //             list1.add(i * 1);
@@ -210,6 +214,34 @@
 public class ArrayListss {
 
     public static void main(String[] args) {
-
+        ArrayList<Integer> height = new ArrayList<>();
+        //
+        // 1, 8, 6, 2, 5, 4, 8, 3, 7
+        //
+        height.add(1);
+        height.add(8);
+        height.add(6);
+        height.add(2);
+        height.add(5);
+        height.add(4);
+        height.add(8);
+        height.add(3);
+        height.add(7);
+        //
+        int maxWater = 0;
+        //
+        for (int i = 0; i < height.size(); i++) {
+            // System.out.print(height.get(i) + " ");
+            for (int j = i + 1; j < height.size(); j++) {
+                // System.out.print(height.get(i) + " " + height.get(j) + " ");
+                int ht = Math.min(height.get(i), height.get(j));
+                // System.out.print(ht + " ");
+                int width = j - i;
+                // System.out.print(width + " ");
+                int currWater = ht * width;
+                maxWater = Math.max(maxWater, currWater);
+            }
+        }
+        System.out.print(maxWater + " ");
     }
 }
