@@ -1,7 +1,6 @@
 
 import java.util.ArrayList;
 
-// import java.util.ArrayList;
 // import java.util.Collections;
 //
 //     public static void main(String[] args) {
@@ -211,37 +210,123 @@ import java.util.ArrayList;
 //
 //
 // // Container with most water
+// public class ArrayListss {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> height = new ArrayList<>();
+//         //
+//         // 1, 8, 6, 2, 5, 4, 8, 3, 7
+//         //
+//         height.add(1);
+//         height.add(8);
+//         height.add(6);
+//         height.add(2);
+//         height.add(5);
+//         height.add(4);
+//         height.add(8);
+//         height.add(3);
+//         height.add(7);
+//         //
+//         //
+//         // // // Firts type
+//         //
+//         // int maxWater = 0;
+//         // //
+//         // for (int i = 0; i < height.size(); i++) {
+//         //     // System.out.print(height.get(i) + " ");
+//         //     for (int j = i + 1; j < height.size(); j++) {
+//         //         // System.out.print(height.get(i) + " " + height.get(j) + " ");
+//         //         int ht = Math.min(height.get(i), height.get(j));
+//         //         // System.out.print(ht + " ");
+//         //         int width = j - i;
+//         //         // System.out.print(width + " ");
+//         //         int currWater = ht * width;
+//         //         maxWater = Math.max(maxWater, currWater); 
+//         //     }
+//         // }
+//         // System.out.print(maxWater + " ");
+//         //
+//         //
+//         // // // Second type
+//         int maxWater = 0;
+//         int lp = 0;
+//         int rp = height.size() - 1;
+//         while (lp < rp) {
+//             // // Calculate Water
+//             int ht = Math.min(height.get(lp), height.get(rp));
+//             int width = rp - lp;
+//             int currentWater = ht * width;
+//             maxWater = Math.max(maxWater, currentWater);
+//             // // Update poit
+//             if (height.get(lp) < height.get(rp)) {
+//                 lp++;
+//             } else {
+//                 rp--;
+//             }
+//         }
+//         System.out.println(maxWater);
+//     }
+// }
+//
+//
+//
+// // // // // First Type
+// // // // //  Pair Sum - 1
+// // // FInd any pair in a sorted ArrayList has a target sum
+// public class ArrayListss {
+//     public static boolean pairSum1(ArrayList<Integer> list, int target) {
+//         for (int i = 0; i < list.size(); i++) {
+//             for (int j = i + 1; j < list.size(); j++) {
+//                 if (list.get(i) + list.get(j) == target) {
+//                     return true;
+//                 }
+//             }
+//         }
+//         return false;
+//     }
+//     public static void main(String[] args) {
+//         ArrayList<Integer> list = new ArrayList<>();
+//         // 1, 2, 3, 4, 5. 6
+//         list.add(1);
+//         list.add(2);
+//         list.add(3);
+//         list.add(4);
+//         list.add(5);
+//         list.add(6);
+//         int target = 10;
+//         System.out.println(pairSum1(list, target));
+//     }
+// }
+//
+//
+//
+// // // // Second Type
+// // // //  Pair Sum - 1
+// // FInd any pair in a sorted ArrayList has a target sum
 public class ArrayListss {
 
-    public static void main(String[] args) {
-        ArrayList<Integer> height = new ArrayList<>();
-        //
-        // 1, 8, 6, 2, 5, 4, 8, 3, 7
-        //
-        height.add(1);
-        height.add(8);
-        height.add(6);
-        height.add(2);
-        height.add(5);
-        height.add(4);
-        height.add(8);
-        height.add(3);
-        height.add(7);
-        //
-        int maxWater = 0;
-        //
-        for (int i = 0; i < height.size(); i++) {
-            // System.out.print(height.get(i) + " ");
-            for (int j = i + 1; j < height.size(); j++) {
-                // System.out.print(height.get(i) + " " + height.get(j) + " ");
-                int ht = Math.min(height.get(i), height.get(j));
-                // System.out.print(ht + " ");
-                int width = j - i;
-                // System.out.print(width + " ");
-                int currWater = ht * width;
-                maxWater = Math.max(maxWater, currWater);
+    public static boolean pairSum1(ArrayList<Integer> list, int target) {
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i + 1; j < list.size(); j++) {
+                if (list.get(i) + list.get(j) == target) {
+                    return true;
+                }
             }
         }
-        System.out.print(maxWater + " ");
+        return false;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        // 1, 2, 3, 4, 5. 6
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+
+        int target = 10;
+
+        System.out.println(pairSum1(list, target));
     }
 }
